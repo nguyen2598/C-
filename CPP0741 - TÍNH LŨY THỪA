@@ -1,0 +1,21 @@
+#include <bits/stdc++.h>
+using namespace std;
+int kt(int n,int k,long p){
+	if(k==0)return 1;
+	int t=kt(n,k/2,p);
+	if(k%2==0)return ((t%p)*(t%p))%p;
+	else return  ((((t%p)*(t%p))%p)*n)%p;
+}
+int main() {
+	int t,x,y,p;
+	cin>>t;
+	while(t--)
+	{
+		cin>>x>>y>>p;
+	cout<<kt(x,y,p);
+		cout<<endl;
+	}
+	// your code here
+
+	return 0;
+}
