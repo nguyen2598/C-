@@ -1,0 +1,13 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    	string s;
+    	string a;
+    	getline(cin,s);
+    	cin>>a;
+    	stringstream s2(s);
+    	string token;
+    	while(s2 >> token) {
+		if(token != a)cout<<token<<" ";
+	}
+}
