@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+string s;
+getline(cin,s);
+int i=0;
+string a[100];
+for(i=0;i<s.size();i++){
+      if(s[i]>=65&&s[i]<=90)
+         s[i]=s[i]+32;
+   }
+//cout<<s;
+stringstream ss(s);
+string token;
+i=0;
+while(ss>>token){
+	a[i]=token;
+	i++;
+}for(int j=0;j<a[i-1].size();j++)
+a[i-1][j]-=32;
+for(int j=0;j<i-1;j++){a[j][0]-=32;
+cout<<a[j];
+if(j<i-2)cout<<" ";}
+cout<<", "<<a[i-1];
+
+}
