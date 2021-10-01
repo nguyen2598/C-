@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+using namespace std;
+int b[1000009]={};
+int main() {
+	int t,n,m;
+	cin>>t;
+	while(t--)
+	{
+		int x;
+		cin>>n;
+		set<int> a;
+		for(int i=0;i<n;i++){
+			cin>>x;
+			if(x>0)a.insert(x);
+		}
+		set<int>::iterator i;
+		int dem=1;
+		for(i=a.begin();i!=a.end();i++){
+			if(*i!=dem){	
+				break;
+			}
+			dem++;
+		}
+		cout<<dem;
+		cout<<endl;
+	}
+
+
+	return 0;
+}
