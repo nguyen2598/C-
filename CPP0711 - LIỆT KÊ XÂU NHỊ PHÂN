@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+int a[20],n;
+void in(){
+    for(int i=1;i<=n;i++){
+        cout<<a[i];
+    }
+    cout<<" ";
+}
+void Try(int x){
+    for(int j=0;j<=1;j++){
+        a[x]=j;
+        if(x==n)in();
+        else Try(x+1);
+    }
+}
+int main(){
+	int t;
+	cin>>t;
+	while(t--){
+		
+		cin>>n;
+		Try(1);
+		cout<<endl;
+	}
+}
