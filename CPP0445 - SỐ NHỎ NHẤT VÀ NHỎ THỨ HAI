@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+ using namespace std; 
+ 
+ int main() { 
+ int t; 
+ cin>>t; 
+ while(t--) { 
+ int n;
+ cin>>n;
+ int a[n],minn=10000007;
+ int y;
+ for(int i=0;i<n;i++){
+ cin>>a[i];
+ }
+ sort(a,a+n);
+ int kt=0;
+  for(int i=0;i<n;i++)if(a[i]!=a[0]&&a[i]>a[0]){
+  	y=i;
+  	kt=1;
+  	break;
+  }
+  if(kt==1)cout<<a[0]<<" "<<a[y];
+  else cout<<"-1";
+  cout<<endl;
+    } 
+}
