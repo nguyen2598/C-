@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+int b[400];
+int main(){
+	int t;
+	cin>>t;
+	while(t--){
+		string s;
+		cin>>s;
+		int n;
+		cin>>n;
+		int dem=0;
+		for(int i=0;i<s.size();i++){
+			b[s[i]]++;
+			if(b[s[i]]==1)dem++;
+		}
+		for(int i=0;i<400;i++)b[i]=0;
+		if(26-dem<=n)cout<<"1";
+		else cout<<"0";
+		cout<<endl;
+	}
+}
+
